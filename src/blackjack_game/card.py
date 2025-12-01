@@ -30,7 +30,7 @@ class Card():
         if self.rank in {'K','Q','J'}:
             return 10
         if self.rank == 'A':
-            return 11 # DEPSUES EN LA CLASE SELECICONAMOS SEHUN LO QUE VENGA MEJOR
+            return 11 # DEPSUES EN LA CLASE SELECICONAMOS SEHUN LO QUE VENGA
         return int(self.rank)
     
     def __str__(self): 

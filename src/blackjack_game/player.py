@@ -1,24 +1,23 @@
 class Player():
     #el jugador tiene que gerstioanr sus cartas y clalcular la puntuacion:)
-    def __init__(self, hand, score):
+    def __init__(self, name: str):
         self.hand= [] #-> lista de las cartas
-        self.score = score
-
+        self.name = name
+    
     @property
     def hand(self):
         return self._hand
-    
     @property
-    def score(self):
-        return self.score
-    
+    def name(self):
+        return self._name
+
+
     @hand.setter
     def hand(self,value):
         self._hand=value
-
-    @score.setter
-    def score(self,value:int):
-        self._score=value
+    @name.setter
+    def name(self,value):
+        self._name=value
 
     def add_card(self, card):
         self._hand.append(card)

@@ -1,12 +1,12 @@
 import random
-from blackjack_game.card import Card
-from blackjack_game.player import Player
+from card import Card
+from player import Player
 
 class Game():
-    def __init__(self, deck, players):
+    def __init__(self):
         self.deck = []
         self.player = Player("NICKIIII")
-        self.player = Player("Dealer")
+        self.dealer = Player("Dealer")
         self._create_deck()
     
     def _create_deck(self):
