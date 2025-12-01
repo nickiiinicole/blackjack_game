@@ -1,7 +1,7 @@
 class Card():
     #suit es el palo->mano, para identificar : corazoned, diamantes, picas, treboles
     # rango-> valor de la de carta
-    def __init__(self, suit, rank, point):
+    def __init__(self, suit, rank):
         self.suit= suit
         self.rank= rank
     
@@ -11,9 +11,6 @@ class Card():
     @property
     def rank(self):
         return self._rank
-    @property
-    def point(self):
-        return self._point
 
     @suit.setter
     def suit(self, value: str):
@@ -30,10 +27,10 @@ class Card():
         self._rank = value
 
     def score(self):
-        if self.rank in {'K,Q,J'}:
+        if self.rank in {'K','Q','J'}:
             return 10
         if self.rank == 'A':
-            return [1,11]
+            return 11 # DEPSUES EN LA CLASE SELECICONAMOS SEHUN LO QUE VENGA MEJOR
         return int(self.rank)
     
     def __str__(self): 
